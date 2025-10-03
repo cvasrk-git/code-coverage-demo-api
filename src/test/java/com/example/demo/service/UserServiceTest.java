@@ -46,19 +46,41 @@ public class UserServiceTest {
     @Test
     void testGetUserById() {
         // Arrange
-        User user = new User(1L, "John", 50000.0);
-        when(userDao.getUserById(1L)).thenReturn(user);
+        User user1 = new User(1L, "John", 50000.0);
+        User user2 = new User(2L, "Alice", 60000.0);
+
+        // Mock DAO getUserById
+        when(userDao.getUserById(1L)).thenReturn(user1);
+        when(userDao.getUserById(2L)).thenReturn(user2);
+        when(userDao.getUserById(3L)).thenReturn(null); // non-existing user
 
         // Act
-        User result = userService.getUserById(1L);
+        User result1 = userService.getUserById(1L);
+        User result2 = userService.getUserById(2L);
+        User result3 = userService.getUserById(3L);
 
-        // Assert in test class test 3
         // Assert
-        // Assert in test class
-        // Assert in test class test 3
-        assertThat(result).isNotNull();
-        assertThat(result.getUserId()).isEqualTo(1L);
-        assertThat(result.getUserName()).isEqualTo("John");
+        assertThat(result1).isNotNull();
+        assertThat(result1.getUserName()).isEqualTo("John");
+
+        assertThat(result2).isNotNull();
+        assertThat(result2.getUserName()).isEqualTo("Alice");
+
+        assertThat(result3).isNull();
+    }
+
+    @Test
+    void testUserGettersAndSetters() {
+        User user = new User(1L, "John", 50000.0);
+        assertThat(user.getUserId()).isEqualTo(1L);
+        assertThat(user.getUserName()).isEqualTo("John");
+        assertThat(user.getSalary()).isEqualTo(50000.0);
+    }
+
+    @Test
+    void testNoArgConstructor() {
+        UserService service = new UserService();
+        assertThat(service).isNotNull();
     }
 
 }

@@ -7,22 +7,22 @@ import java.util.Arrays;
 import java.util.List;
 
 @Repository
-<span class="nc" id="L10">public class UserDao {</span>
-<span class="nc" id="L11">    private final List&lt;User&gt; users = Arrays.asList(</span>
-<span class="nc" id="L12">            new User(1L, &quot;Alice&quot;, 50000.0),</span>
-<span class="nc" id="L13">            new User(2L, &quot;Bob&quot;, 60000.0),</span>
-<span class="nc" id="L14">            new User(3L, &quot;Charlie&quot;, 70000.0)</span>
+<span class="fc" id="L10">public class UserDao {</span>
+<span class="fc" id="L11">    private final List&lt;User&gt; users = Arrays.asList(</span>
+<span class="fc" id="L12">            new User(1L, &quot;Alice&quot;, 50000.0),</span>
+<span class="fc" id="L13">            new User(2L, &quot;Bob&quot;, 60000.0),</span>
+<span class="fc" id="L14">            new User(3L, &quot;Charlie&quot;, 70000.0)</span>
     );
 
     public List&lt;User&gt; getAllUsers() {
-<span class="nc" id="L18">        return users;</span>
+<span class="fc" id="L18">        return users;</span>
     }
 
     public User getUserById(Long id) {
-<span class="nc" id="L22">        return users.stream()</span>
-<span class="nc" id="L23">                .filter(u -&gt; u.getUserId().equals(id))</span>
-<span class="nc" id="L24">                .findFirst()</span>
-<span class="nc" id="L25">                .orElse(null);</span>
+<span class="fc" id="L22">        return users.stream()</span>
+<span class="fc" id="L23">                .filter(u -&gt; u.getUserId().equals(id))</span>
+<span class="fc" id="L24">                .findFirst()</span>
+<span class="fc" id="L25">                .orElse(null);</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

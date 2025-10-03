@@ -20,12 +20,12 @@ public class UserController {
 
     @GetMapping
     public List&lt;User&gt; getAllUsers() {
-<span class="nc" id="L23">        return userService.getAllUsers();</span>
+<span class="fc" id="L23">        return userService.getAllUsers();</span>
     }
 
     @GetMapping(&quot;/{id}&quot;)
     public User getUserById(@PathVariable Long id) {
-<span class="nc" id="L28">        return userService.getUserById(id);</span>
+<span class="fc" id="L28">        return userService.getUserById(id);</span>
     }
     @GetMapping(&quot;/hello&quot;)
     public String hello() {
