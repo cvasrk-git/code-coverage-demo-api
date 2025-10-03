@@ -23,17 +23,9 @@ public class UserControllerTest {
     @MockBean   // 👈 this creates a mock bean in Spring context
     private UserService userService;
 
-    @MockBean   // 👈 adds a mock UserService bean
-    @MockBean   // 👈 this creates a mock bean in Spring context
-    private UserService userService;
-
     @Test
     public void testHello() throws Exception {
-    public void testHello() throws Exception {
-        mockMvc.perform(get("/hello"))
-    public void testHello() throws Exception {
-        mockMvc.perform(get("/api/users/hello"))
-    void testHello() throws Exception {
+
         // Mock service response
 //        given(userService.getAllUsers()).willReturn("Hello World!");
 
