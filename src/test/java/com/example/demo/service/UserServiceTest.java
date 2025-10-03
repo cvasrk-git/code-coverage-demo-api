@@ -55,6 +55,7 @@ public class UserServiceTest {
         // Assert in test class test 3
         // Assert
         // Assert in test class
+        // Assert in test class test 3
         assertThat(result).isNotNull();
         assertThat(result.getUserId()).isEqualTo(1L);
         assertThat(result.getUserName()).isEqualTo("John");
