@@ -52,9 +52,10 @@ public class UserServiceTest {
         // Act
         User result = userService.getUserById(1L);
 
-        // Assert
+        // Assert in test class
         assertThat(result).isNotNull();
         assertThat(result.getUserId()).isEqualTo(1L);
         assertThat(result.getUserName()).isEqualTo("John");
     }
+
 }
