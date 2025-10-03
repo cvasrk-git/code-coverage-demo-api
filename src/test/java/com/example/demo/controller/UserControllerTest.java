@@ -1,5 +1,7 @@
 package com.example.demo.controller;
 
+import com.example.demo.service.UserService;
+import com.example.demo.service.UserServiceTest;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -15,9 +17,14 @@ public class UserControllerTest {
     @Autowired
     private MockMvc mockMvc;
 
+    @MockBean   // 👈 this creates a mock bean in Spring context
+    private UserService userService;
+
     @Test
     public void testHello() throws Exception {
         mockMvc.perform(get("/hello"))
+    public void testHello() throws Exception {
+        mockMvc.perform(get("/api/users/hello"))
                 .andExpect(status().isOk())
                 .andExpect(content().string("Hello World!"));
     }

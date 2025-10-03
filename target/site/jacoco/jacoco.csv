@@ -1,0 +1,6 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+code-coverage-demo-api,com.example.demo.dao,UserDao,60,0,0,0,10,0,4,0,4,0
+code-coverage-demo-api,com.example.demo.service,UserService,0,15,0,0,0,3,0,3,0,3
+code-coverage-demo-api,com.example.demo.data,User,163,18,30,0,3,3,24,3,9,3
+code-coverage-demo-api,com.example.demo.controller,UserController,9,8,0,0,2,2,2,2,2,2
+code-coverage-demo-api,com.example.demo,DemoApiApplication,5,3,0,0,2,1,1,1,1,1

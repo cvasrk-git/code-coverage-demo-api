@@ -43,4 +43,18 @@ public class UserServiceTest {
                 .containsExactly("John", "Alice");
     }
 
+    @Test
+    void testGetUserById() {
+        // Arrange
+        User user = new User(1L, "John", 50000.0);
+        when(userDao.getUserById(1L)).thenReturn(user);
+
+        // Act
+        User result = userService.getUserById(1L);
+
+        // Assert
+        assertThat(result).isNotNull();
+        assertThat(result.getUserId()).isEqualTo(1L);
+        assertThat(result.getUserName()).isEqualTo("John");
+    }
 }
