@@ -35,4 +35,18 @@ class CommonUtilTest {
         String output = outContent.toString();
         assertTrue(output.contains("Name: Siva"));
     }
+
+    @Test
+    void testAddNumbers() {
+        CommonUtil util = new CommonUtil();
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        PrintStream originalOut = System.out;
+        System.setOut(new PrintStream(outContent));
+
+        ReflectionTestUtils.invokeMethod(util, "addNumbers");
+
+        System.setOut(originalOut);
+        String output = outContent.toString();
+        assertTrue(output.contains("Value: 8"));
+    }
 }

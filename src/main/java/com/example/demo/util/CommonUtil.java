@@ -10,5 +10,8 @@ public class CommonUtil {
         chekValues();
         System.out.println("Name: " + name);
     }
-
+    public void addNumbers() {
+        chekValues();
+        System.out.println("Value: " + 8);
+    }
 }
